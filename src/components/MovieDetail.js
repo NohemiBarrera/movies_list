@@ -45,6 +45,10 @@ class MovieDetail extends Component {
 				vote_average
 			} = this.state;
 
+			const allGenres = genres.map(item => (
+				<p>{item.name}</p>
+			))
+
         return(
 					<div className="container-fluid">
 						<Link to="/">
@@ -65,6 +69,7 @@ class MovieDetail extends Component {
 										<p><b>Calificación</b>:</p>
 										<p>{vote_average}</p>
 										<p><b>Géneros:</b></p>
+										{allGenres}
 										<p><b>Descripción:</b></p>
 										<p>{overview}</p>									
 									</div>

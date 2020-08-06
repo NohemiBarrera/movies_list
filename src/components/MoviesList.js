@@ -28,7 +28,11 @@ class MoviesList extends Component {
 								<img src={`https://image.tmdb.org/t/p/w500/${item.poster_path}`} className="card-img-top" alt={item.poster_path}/>
 								<div className="card-body">
 									<h5 className="card-title">{item.title}</h5>
-									<p className="card-text">{item.release_date} {item.vote_average}</p>									
+									<div className="d-flex justify-content-between flex-row">
+									<p className="card-text">{item.release_date}</p>
+									<p><span role="img">&#11088;</span> {item.vote_average}</p>
+									</div>
+																		
 								</div>
 							</Link>
 							
