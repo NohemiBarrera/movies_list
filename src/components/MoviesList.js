@@ -23,10 +23,9 @@ class MoviesList extends Component {
     render(){
 				const {movies} = this.state;
 				const movieCard = movies.map(item => (
-						<div className="card col-6 col-md-4" style={{width: '18rem', marginBottom: '10px'}} key={item.id}>
+						<div className="card col-6 col-md-4 d-flex justify-content-end" style={{width: '18rem', height: '500px', marginBottom: '10px',backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundSize: '100% 100%', backgroundImage:`url("https://image.tmdb.org/t/p/w500/${item.poster_path}")`}} key={item.id}>
 							<Link to={`/detail/${item.id}`}>
-								<img src={`https://image.tmdb.org/t/p/w500/${item.poster_path}`} className="card-img-top" alt={item.poster_path}/>
-								<div className="card-body">
+								<div className="card-body" style={{backgroundColor: '#000', opacity: 0.8, color: '#fff'}}>
 									<h5 className="card-title">{item.title}</h5>
 									<div className="d-flex justify-content-between flex-row">
 									<p className="card-text">{item.release_date}</p>
