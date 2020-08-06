@@ -8,8 +8,10 @@ const MoviesAPI = {
             return res
         }).catch(err => console.log(err))
     },
-    getMovieDetail: function(){
-        
+    getMovieDetail: function(movieID){
+        return axios.get(`https://api.themoviedb.org/3/movie/${movieID}?api_key=${APIKey}&language=es-ES`,{ headers: config}).then(res => {
+            return res
+        }).catch(err => console.log(err))
     }
 }
 

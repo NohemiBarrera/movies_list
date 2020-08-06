@@ -17,7 +17,7 @@ function App() {
           />
           <Route
             exact
-            path='/:id'
+            path='/detail/:id'
             component={MovieDetail}
           />
         </Switch>
